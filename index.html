@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de Desarrollo de Software - Metodología Scrum (SistemaVentasDjango)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h1>Evaluación del Comportamiento en Desarrollo de Software</h1>
+  <p>Metodología Seleccionada: Scrum | Proyecto Analizado: <a href="https://github.com/Norbey32/SistemaVentasDjango.git" target="_blank">SistemaVentasDjango</a></p>
+</header>
+
+<section id="reconocimiento">
+  <h2> Metodología Seleccionada </h2>
+  <p>Tras analizar el componente formativo “Aplicación de pruebas de software” y el proyecto <strong>SistemaVentasDjango</strong> (un sistema de ventas en Django con modelos para productos, ventas y usuarios), se reconoce que la metodología seleccionada es <strong>Scrum</strong>. Este proyecto parece haber sido desarrollado de manera iterativa, pero sin evidencia explícita de sprints o ceremonias en el repositorio (e.g., commits sin referencias a retrospectives). Scrum se adapta bien a proyectos Django, promoviendo entregas incrementales de funcionalidades como gestión de inventarios o reportes de ventas.</p>
+</section>
+
+<section id="propuestas">
+  <h2> Propuestas de Cambios en la Secuencia de Procesos </h2>
+  <p>Basado en el comportamiento observado en el proyecto SistemaVentasDjango (e.g., código en `views.py` sin pruebas unitarias, y estructura de apps que podría beneficiarse de refactorización), se proponen ajustes en la secuencia de ejecución de procesos de Scrum para optimizar el desarrollo.</p>
+  <button id="toggle-details">Mostrar Detalles de Cambios</button>
+  <div id="details" class="hidden">
+    <h3>Cambios Operativos:</h3>
+    <ul>
+      <li><strong>Secuencia de Ceremonias:</strong> Introducir sprints de 2 semanas para el proyecto, con Sprint Planning enfocada en features como "Agregar autenticación de usuarios" (basado en `models.py`). Ajustar la secuencia estándar para incluir Daily Scrums virtuales, dado que el repo sugiere desarrollo individual.</li>
+      <li><strong>Roles y Responsabilidades:</strong> Designar un Product Owner para priorizar backlog (e.g., mejoras en reportes de ventas), y un Scrum Master para facilitar reuniones, reduciendo la dependencia de commits ad-hoc.</li>
+    </ul>
+    <h3>Cambios Técnicos:</h3>
+    <ul>
+      <li><strong>Integración Continua (CI/CD):</strong> Implementar GitHub Actions en el repo para ejecutar pruebas Django (e.g., `python manage.py test`) al final de cada sprint, ajustando la secuencia de desarrollo (Desarrollo en `views.py` → Pruebas → Despliegue en Heroku).</li>
+      <li><strong>Pruebas de Software:</strong> Adoptar TDD para escribir pruebas en `tests.py` antes de modificar modelos (e.g., probar lógica de ventas). Integrar code reviews en Pull Requests para validar cambios en `settings.py`.</li>
+    </ul>
+    <h3>Aplicación de Cambios:</h3>
+    <p>Estos cambios se aplicarán en el próximo sprint del proyecto: operativamente, mediante commits documentados; técnicamente, agregando un archivo `requirements.txt` para dependencias y configurando un pipeline CI.</p>
+  </div>
+</section>
+
+<section id="practicas">
+  <h2> Buenas Prácticas de Calidad </h2>
+  <p>Para el proyecto SistemaVentasDjango, se seleccionan prácticas alineadas con Scrum y el Agile Manifesto: Uso de Django ORM para modelos limpios (e.g., en `models.py`), métricas de cobertura de código con tools como Coverage.py, y adherencia a "Done" definiendo criterios como "venta registrada con validación". Estas prácticas mejoran la calidad, reduciendo bugs en funcionalidades como reportes, mediante inspección iterativa.</p>
+</section>
+
+<section id="documentacion">
+  <h2> Documentación de los Cambios </h2>
+  <p>Los cambios se documentan en el repositorio GitHub del proyecto: Crear un archivo `CHANGELOG.md` con versiones de sprints, y usar la wiki para diagramas de flujo (e.g., secuencia de ventas). Incluir un `README.md` actualizado con instrucciones de instalación y referencias a Scrum. Esta documentación facilita colaboraciones y auditorías futuras.</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Evaluación de Desarrollo de Software. Proyecto: SistemaVentasDjango. Desarrollado con buenas prácticas de calidad.</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
